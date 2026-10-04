@@ -4,7 +4,7 @@ from CoolProp.CoolProp import PropsSI
 
 
 # ============================================================
-# CONFIGURACION DE PAGINA
+# PAGE CONFIGURATION
 # ============================================================
 
 st.set_page_config(
@@ -16,7 +16,7 @@ st.set_page_config(
 
 
 # ============================================================
-# FUNCIONES AUXILIARES
+# AUXILIARY FUNCTIONS
 # ============================================================
 
 def mostrar_html(codigo):
@@ -79,10 +79,6 @@ def generar_svg_bomba_calor(
         height="480"
         xmlns="http://www.w3.org/2000/svg"
     >
-
-        <!-- ================================================= -->
-        <!-- DEFINICIONES -->
-        <!-- ================================================= -->
 
         <defs>
 
@@ -206,9 +202,7 @@ def generar_svg_bomba_calor(
         </defs>
 
 
-        <!-- ================================================= -->
-        <!-- TITULO -->
-        <!-- ================================================= -->
+        <!-- TITLE -->
 
         <text
             x="600"
@@ -235,9 +229,7 @@ def generar_svg_bomba_calor(
         </text>
 
 
-        <!-- ================================================= -->
-        <!-- FUENTE DE CALOR -->
-        <!-- ================================================= -->
+        <!-- HEAT SOURCE -->
 
         <rect
             x="35"
@@ -303,9 +295,7 @@ def generar_svg_bomba_calor(
         </text>
 
 
-        <!-- ================================================= -->
-        <!-- FLECHA EVAPORADOR -->
-        <!-- ================================================= -->
+        <!-- EVAPORATOR ARROW -->
 
         <line
             x1="265"
@@ -331,9 +321,7 @@ def generar_svg_bomba_calor(
         </text>
 
 
-        <!-- ================================================= -->
-        <!-- BOMBA DE CALOR -->
-        <!-- ================================================= -->
+        <!-- HEAT PUMP -->
 
         <rect
             x="405"
@@ -375,7 +363,8 @@ def generar_svg_bomba_calor(
         </text>
 
 
-        <!-- EVAP -->
+        <!-- EVAPORATION -->
+
         <rect
             x="438"
             y="202"
@@ -416,7 +405,8 @@ def generar_svg_bomba_calor(
         </text>
 
 
-        <!-- COND -->
+        <!-- CONDENSATION -->
+
         <rect
             x="617"
             y="202"
@@ -458,6 +448,7 @@ def generar_svg_bomba_calor(
 
 
         <!-- COP -->
+
         <rect
             x="438"
             y="284"
@@ -499,6 +490,7 @@ def generar_svg_bomba_calor(
 
 
         <!-- REFRIGERANT FLOW -->
+
         <rect
             x="617"
             y="284"
@@ -539,9 +531,7 @@ def generar_svg_bomba_calor(
         </text>
 
 
-        <!-- ================================================= -->
-        <!-- FLECHA CONDENSADOR -->
-        <!-- ================================================= -->
+        <!-- CONDENSER ARROW -->
 
         <line
             x1="795"
@@ -567,9 +557,7 @@ def generar_svg_bomba_calor(
         </text>
 
 
-        <!-- ================================================= -->
-        <!-- AGUA CALIENTE -->
-        <!-- ================================================= -->
+        <!-- HOT WATER -->
 
         <rect
             x="935"
@@ -635,9 +623,7 @@ def generar_svg_bomba_calor(
         </text>
 
 
-        <!-- ================================================= -->
-        <!-- POTENCIA ELECTRICA -->
-        <!-- ================================================= -->
+        <!-- ELECTRICAL POWER -->
 
         <line
             x1="600"
@@ -675,7 +661,6 @@ def generar_svg_bomba_calor(
             ELECTRIC POWER: {P_electrica_kW:,.0f} kW
         </text>
 
-
     </svg>
 
     </div>
@@ -687,7 +672,7 @@ def generar_svg_bomba_calor(
 
 
 # ============================================================
-# CSS PRINCIPAL
+# MAIN CSS
 # ============================================================
 
 st.markdown(
@@ -716,13 +701,7 @@ st.markdown(
         max-width: 1500px;
     }
 
-
-    /* =======================================================
-       HEADER
-       ======================================================= */
-
     .hero {
-
         background: linear-gradient(
             135deg,
             #0f2740 0%,
@@ -731,9 +710,7 @@ st.markdown(
         );
 
         padding: 30px 35px;
-
         border-radius: 18px;
-
         margin-bottom: 20px;
 
         box-shadow:
@@ -741,88 +718,47 @@ st.markdown(
             rgba(15,39,64,0.16);
     }
 
-
     .hero-title {
-
         color: white;
-
         font-size: 34px;
-
         font-weight: 700;
-
         margin-bottom: 5px;
     }
 
-
     .hero-subtitle {
-
         color: #d9edf5;
-
         font-size: 16px;
-
         margin-bottom: 0px;
     }
 
-
     .hero-badge {
-
         display: inline-block;
-
-        background-color:
-            rgba(255,255,255,0.15);
-
+        background-color: rgba(255,255,255,0.15);
         color: white;
-
         padding: 5px 12px;
-
         border-radius: 15px;
-
         font-size: 12px;
-
         margin-top: 15px;
     }
 
-
-    /* =======================================================
-       TITULOS
-       ======================================================= */
-
     .section-title {
-
         font-size: 20px;
-
         font-weight: 700;
-
         color: #17324d;
-
         margin-top: 20px;
-
         margin-bottom: 8px;
     }
 
-
     .section-subtitle {
-
         color: #6c7a89;
-
         font-size: 13px;
-
         margin-top: -2px;
-
         margin-bottom: 15px;
     }
 
-
-    /* =======================================================
-       TARJETAS
-       ======================================================= */
-
     .metric-card {
-
         background: white;
-
         padding: 20px;
-
         border-radius: 14px;
 
         box-shadow:
@@ -836,85 +772,51 @@ st.markdown(
         min-height: 120px;
     }
 
-
     .metric-title {
-
         color: #697888;
-
         font-size: 13px;
-
         font-weight: 600;
-
         margin-bottom: 8px;
     }
 
-
     .metric-value {
-
         color: #17324d;
-
         font-size: 28px;
-
         font-weight: 700;
     }
 
-
     .metric-unit {
-
         color: #8593a0;
-
         font-size: 12px;
-
         margin-top: 3px;
     }
 
-
     .heat-card {
-        border-top:
-            5px solid
-            #e67e22;
+        border-top: 5px solid #e67e22;
     }
-
 
     .electric-card {
-        border-top:
-            5px solid
-            #3498db;
+        border-top: 5px solid #3498db;
     }
-
 
     .tpe-card {
-        border-top:
-            5px solid
-            #27ae60;
+        border-top: 5px solid #27ae60;
     }
-
 
     .saving-card {
-        border-top:
-            5px solid
-            #16a085;
+        border-top: 5px solid #16a085;
     }
-
 
     .cost-card {
-        border-top:
-            5px solid
-            #c0392b;
+        border-top: 5px solid #c0392b;
     }
-
 
     .payback-card {
-        border-top:
-            5px solid
-            #8e44ad;
+        border-top: 5px solid #8e44ad;
     }
 
-
     section[data-testid="stSidebar"] {
-
-        background-color:
-            #eef3f7;
+        background-color: #eef3f7;
     }
 
     </style>
@@ -950,7 +852,7 @@ mostrar_html(
 
 
 # ============================================================
-# REFRIGERANTES
+# REFRIGERANTS
 # ============================================================
 
 MAPA_REFRIGERANTES = {
@@ -969,8 +871,10 @@ MAPA_REFRIGERANTES = {
 REFRIGERANTES_BLOQUEADOS = {
 
     "R450A":
-        "R450A requiere REFPROP para una evaluación robusta "
-        "en esta versión del simulador."
+        "R450A is not enabled in this version of the simulator. "
+        "The current CoolProp HEOS installation shows numerical "
+        "instability for this refrigerant blend. "
+        "REFPROP integration is recommended for a robust R450A evaluation."
 }
 
 
@@ -985,28 +889,27 @@ with st.sidebar:
     )
 
     st.caption(
-        "Defina las condiciones del proceso "
-        "y presione Calculate."
+        "Define the process conditions and press Calculate."
     )
 
     st.divider()
 
 
     # ========================================================
-    # FUENTE DE CALOR
+    # HEAT SOURCE
     # ========================================================
 
     with st.expander(
-        "🔥 Fuente de calor",
+        "🔥 Heat Source",
         expanded=True
     ):
 
         Q_evap_disponible_kW = st.number_input(
-            "Calor disponible",
+            "Available heat",
             min_value=0.0,
             value=450.0,
             step=10.0,
-            help="Calor recuperable disponible en el evaporador."
+            help="Recoverable heat available at the evaporator."
         )
 
         st.caption(
@@ -1015,7 +918,7 @@ with st.sidebar:
 
 
         T_fuente_entrada_C = st.number_input(
-            "Temperatura entrada fuente",
+            "Heat source inlet temperature",
             value=80.0,
             step=1.0
         )
@@ -1026,7 +929,7 @@ with st.sidebar:
 
 
         T_fuente_salida_C = st.number_input(
-            "Temperatura salida fuente",
+            "Heat source outlet temperature",
             value=35.0,
             step=1.0
         )
@@ -1046,7 +949,7 @@ with st.sidebar:
     ):
 
         nombre_visible_ref = st.selectbox(
-            "Refrigerante",
+            "Refrigerant",
             [
                 "R1233zd(E)",
                 "R134a",
@@ -1057,7 +960,7 @@ with st.sidebar:
 
 
         approach_evap_C = st.number_input(
-            "Approach evaporador",
+            "Evaporator approach",
             value=5.0,
             step=0.5
         )
@@ -1068,7 +971,7 @@ with st.sidebar:
 
 
         approach_cond_C = st.number_input(
-            "Approach condensador",
+            "Condenser approach",
             value=5.0,
             step=0.5
         )
@@ -1080,7 +983,7 @@ with st.sidebar:
 
         eta_isentropica = (
             st.number_input(
-                "Eficiencia compresor",
+                "Compressor isentropic efficiency",
                 min_value=1.0,
                 max_value=100.0,
                 value=75.0,
@@ -1096,7 +999,7 @@ with st.sidebar:
 
         eta_motor = (
             st.number_input(
-                "Eficiencia motor",
+                "Motor efficiency",
                 min_value=1.0,
                 max_value=100.0,
                 value=95.0,
@@ -1111,16 +1014,16 @@ with st.sidebar:
 
 
     # ========================================================
-    # AGUA CALIENTE
+    # HOT WATER
     # ========================================================
 
     with st.expander(
-        "💧 Agua caliente",
+        "💧 Hot Water",
         expanded=True
     ):
 
         T_sink_entrada_C = st.number_input(
-            "Temperatura entrada agua",
+            "Water inlet temperature",
             value=105.0,
             step=1.0
         )
@@ -1131,7 +1034,7 @@ with st.sidebar:
 
 
         T_sink_salida_C = st.number_input(
-            "Temperatura salida agua",
+            "Water outlet temperature",
             value=120.0,
             step=1.0
         )
@@ -1142,7 +1045,7 @@ with st.sidebar:
 
 
     # ========================================================
-    # FLASH & TERMOCOMPRESOR
+    # FLASH & THERMOCOMPRESSOR
     # ========================================================
 
     with st.expander(
@@ -1150,7 +1053,7 @@ with st.sidebar:
     ):
 
         P_flash_bar_abs = st.number_input(
-            "Presión flash",
+            "Flash pressure",
             min_value=0.1,
             value=1.5,
             step=0.1
@@ -1162,7 +1065,7 @@ with st.sidebar:
 
 
         P_motriz_bar_g = st.number_input(
-            "Presión vapor motriz",
+            "Motive steam pressure",
             min_value=0.0,
             value=14.0,
             step=0.5
@@ -1174,7 +1077,7 @@ with st.sidebar:
 
 
         P_descarga_bar_g = st.number_input(
-            "Presión descarga",
+            "Discharge pressure",
             min_value=0.0,
             value=8.0,
             step=0.5
@@ -1204,7 +1107,7 @@ with st.sidebar:
     ):
 
         costo_electricidad_usd_kwh = st.number_input(
-            "Costo electricidad",
+            "Electricity cost",
             min_value=0.0,
             value=0.10,
             step=0.01,
@@ -1217,7 +1120,7 @@ with st.sidebar:
 
 
         costo_combustible_usd_mj = st.number_input(
-            "Costo combustible",
+            "Fuel cost",
             min_value=0.0,
             value=0.010,
             step=0.001,
@@ -1231,7 +1134,7 @@ with st.sidebar:
 
         eta_caldera = (
             st.number_input(
-                "Eficiencia caldera",
+                "Boiler efficiency",
                 min_value=1.0,
                 max_value=100.0,
                 value=90.0,
@@ -1246,19 +1149,19 @@ with st.sidebar:
 
 
         horas_operacion_anual = st.number_input(
-            "Horas operación anual",
+            "Annual operating hours",
             min_value=1.0,
             value=8000.0,
             step=100.0
         )
 
         st.caption(
-            "h/año"
+            "h/year"
         )
 
 
         volumen_anual_hl = st.number_input(
-            "Producción anual",
+            "Annual production",
             min_value=1.0,
             value=10000000.0,
             step=100000.0,
@@ -1266,7 +1169,7 @@ with st.sidebar:
         )
 
         st.caption(
-            "hl/año"
+            "hl/year"
         )
 
 
@@ -1294,7 +1197,7 @@ with st.sidebar:
 
 
 # ============================================================
-# ESTADO INICIAL
+# INITIAL STATE
 # ============================================================
 
 if not calcular:
@@ -1323,8 +1226,8 @@ if not calcular:
                 color:#718096;
                 font-size:15px;
             ">
-                Configure las condiciones del proceso en el panel izquierdo
-                y presione CALCULATE.
+                Configure the process conditions in the left panel
+                and press CALCULATE.
             </div>
 
         </div>
@@ -1333,7 +1236,7 @@ if not calcular:
 
 
 # ============================================================
-# CALCULO
+# CALCULATION
 # ============================================================
 
 if calcular:
@@ -1341,7 +1244,7 @@ if calcular:
     try:
 
         # ====================================================
-        # REFRIGERANTE
+        # REFRIGERANT
         # ====================================================
 
         if nombre_visible_ref in REFRIGERANTES_BLOQUEADOS:
@@ -1365,13 +1268,13 @@ if calcular:
 
 
         # ====================================================
-        # VALIDACIONES
+        # VALIDATIONS
         # ====================================================
 
         if Q_evap_disponible_kW <= 0:
 
             raise ValueError(
-                "El calor disponible debe ser mayor que cero."
+                "Available heat must be greater than zero."
             )
 
 
@@ -1382,8 +1285,8 @@ if calcular:
         ):
 
             raise ValueError(
-                "La temperatura de entrada de la fuente "
-                "debe ser mayor que la temperatura de salida."
+                "Heat source inlet temperature must be higher "
+                "than the heat source outlet temperature."
             )
 
 
@@ -1394,20 +1297,20 @@ if calcular:
         ):
 
             raise ValueError(
-                "La temperatura de salida del agua "
-                "debe ser mayor que la temperatura de entrada."
+                "Hot water outlet temperature must be higher "
+                "than the inlet temperature."
             )
 
 
         if ER <= 0:
 
             raise ValueError(
-                "El Entrainment Ratio debe ser mayor que cero."
+                "The Entrainment Ratio must be greater than zero."
             )
 
 
         # ====================================================
-        # TEMPERATURAS DEL CICLO
+        # CYCLE TEMPERATURES
         # ====================================================
 
         T_evap_C = (
@@ -1439,7 +1342,7 @@ if calcular:
 
 
         # ====================================================
-        # TEMPERATURA CRITICA
+        # CRITICAL TEMPERATURE
         # ====================================================
 
         T_crit_K = PropsSI(
@@ -1470,14 +1373,14 @@ if calcular:
 
             raise ValueError(
                 f"{nombre_visible_ref}: "
-                f"T condensación = {T_cond_C:.1f} °C "
-                f"supera la temperatura crítica "
+                f"Condensing temperature = {T_cond_C:.1f} °C "
+                f"is above the critical temperature "
                 f"({T_crit_C:.1f} °C)."
             )
 
 
         # ====================================================
-        # CICLO REFRIGERANTE
+        # REFRIGERATION CYCLE
         # ====================================================
 
         P_evap = PropsSI(
@@ -1569,7 +1472,7 @@ if calcular:
 
 
         # ====================================================
-        # BALANCE BOMBA DE CALOR
+        # HEAT PUMP ENERGY BALANCE
         # ====================================================
 
         w_comp = (
@@ -1596,16 +1499,16 @@ if calcular:
         if q_evap <= 0:
 
             raise ValueError(
-                "El calor específico del evaporador "
-                "resultó menor o igual que cero."
+                "Evaporator specific heat transfer "
+                "is less than or equal to zero."
             )
 
 
         if w_comp <= 0:
 
             raise ValueError(
-                "El trabajo específico del compresor "
-                "resultó menor o igual que cero."
+                "Compressor specific work "
+                "is less than or equal to zero."
             )
 
 
@@ -1653,7 +1556,7 @@ if calcular:
 
 
         # ====================================================
-        # AGUA CALIENTE
+        # HOT WATER
         # ====================================================
 
         P_sink_Pa = (
@@ -1693,8 +1596,8 @@ if calcular:
         if delta_h_sink <= 0:
 
             raise ValueError(
-                "El salto entálpico del agua "
-                "resultó menor o igual que cero."
+                "The hot water enthalpy difference "
+                "is less than or equal to zero."
             )
 
 
@@ -1789,7 +1692,7 @@ if calcular:
 
 
         # ====================================================
-        # TERMOCOMPRESOR
+        # THERMOCOMPRESSOR
         # ====================================================
 
         m_motriz_TC = (
@@ -1807,7 +1710,7 @@ if calcular:
 
 
         # ====================================================
-        # ENERGIA ANUAL
+        # ANNUAL ENERGY
         # ====================================================
 
         energia_termica_util_anual_MJ = (
@@ -1841,7 +1744,7 @@ if calcular:
 
 
         # ====================================================
-        # KPI
+        # ENERGY KPI
         # ====================================================
 
         heat_kpi_reduction = (
@@ -1866,7 +1769,7 @@ if calcular:
 
 
         # ====================================================
-        # ECONOMIA
+        # ECONOMICS
         # ====================================================
 
         fuel_cost_avoided = (
@@ -1904,7 +1807,7 @@ if calcular:
 
 
         # ====================================================
-        # RESULTADO OK
+        # SUCCESS STATUS
         # ====================================================
 
         st.success(
@@ -1913,7 +1816,7 @@ if calcular:
 
 
         # ====================================================
-        # RESULTADOS PRINCIPALES
+        # MAIN RESULTS
         # ====================================================
 
         mostrar_html(
@@ -2123,7 +2026,7 @@ if calcular:
 
 
         # ====================================================
-        # DIAGRAMA VISUAL DE BOMBA DE CALOR
+        # HEAT PUMP VISUAL DIAGRAM
         # ====================================================
 
         mostrar_html(
@@ -2404,7 +2307,7 @@ if calcular:
 
 
         # ====================================================
-        # BALANCE ANUAL
+        # ANNUAL ENERGY BALANCE
         # ====================================================
 
         with st.expander(
@@ -2416,24 +2319,24 @@ if calcular:
 
             e1.metric(
                 "Useful Heat Recovered",
-                f"{energia_termica_util_anual_MJ / 1000:,.0f} GJ/y"
+                f"{energia_termica_util_anual_MJ / 1000:,.0f} GJ/year"
             )
 
 
             e2.metric(
                 "Purchased Fuel Avoided",
-                f"{combustible_evitado_anual_MJ / 1000:,.0f} GJ/y"
+                f"{combustible_evitado_anual_MJ / 1000:,.0f} GJ/year"
             )
 
 
             e3.metric(
                 "Electricity Consumption",
-                f"{energia_electrica_anual_kWh / 1000:,.0f} MWh/y"
+                f"{energia_electrica_anual_kWh / 1000:,.0f} MWh/year"
             )
 
 
         # ====================================================
-        # DETALLE TERMODINAMICO
+        # THERMODYNAMIC CYCLE DETAILS
         # ====================================================
 
         with st.expander(
@@ -2454,16 +2357,16 @@ if calcular:
                 )
 
                 st.write(
-                    f"**T:** {T_evap_C:.2f} °C"
+                    f"**Temperature:** {T_evap_C:.2f} °C"
                 )
 
                 st.write(
-                    f"**P:** "
+                    f"**Pressure:** "
                     f"{P_evap / 100000:.2f} bar abs"
                 )
 
                 st.write(
-                    f"**h:** "
+                    f"**Enthalpy:** "
                     f"{h1 / 1000:.2f} kJ/kg"
                 )
 
@@ -2479,17 +2382,17 @@ if calcular:
                 )
 
                 st.write(
-                    f"**T:** "
+                    f"**Temperature:** "
                     f"{T2 - 273.15:.2f} °C"
                 )
 
                 st.write(
-                    f"**P:** "
+                    f"**Pressure:** "
                     f"{P_cond / 100000:.2f} bar abs"
                 )
 
                 st.write(
-                    f"**h:** "
+                    f"**Enthalpy:** "
                     f"{h2 / 1000:.2f} kJ/kg"
                 )
 
@@ -2505,17 +2408,17 @@ if calcular:
                 )
 
                 st.write(
-                    f"**T:** "
+                    f"**Temperature:** "
                     f"{T_cond_C:.2f} °C"
                 )
 
                 st.write(
-                    f"**P:** "
+                    f"**Pressure:** "
                     f"{P_cond / 100000:.2f} bar abs"
                 )
 
                 st.write(
-                    f"**h:** "
+                    f"**Enthalpy:** "
                     f"{h3 / 1000:.2f} kJ/kg"
                 )
 
@@ -2531,34 +2434,34 @@ if calcular:
                 )
 
                 st.write(
-                    f"**T:** "
+                    f"**Temperature:** "
                     f"{T4 - 273.15:.2f} °C"
                 )
 
                 st.write(
-                    f"**P:** "
+                    f"**Pressure:** "
                     f"{P_evap / 100000:.2f} bar abs"
                 )
 
                 st.write(
-                    f"**h:** "
+                    f"**Enthalpy:** "
                     f"{h4 / 1000:.2f} kJ/kg"
                 )
 
                 st.write(
-                    f"**Quality:** "
+                    f"**Vapor quality:** "
                     f"{Q4:.3f}"
                 )
 
 
         # ====================================================
-        # ESTADO REFRIGERANTE
+        # REFRIGERANT STATUS
         # ====================================================
 
         st.info(
             f"**{nombre_visible_ref}**  |  "
-            f"T critical: {T_crit_C:.2f} °C  |  "
-            f"T condensing: {T_cond_C:.2f} °C  |  "
+            f"Critical temperature: {T_crit_C:.2f} °C  |  "
+            f"Condensing temperature: {T_cond_C:.2f} °C  |  "
             f"Critical margin: {margen_critico_C:.2f} °C"
         )
 
@@ -2566,15 +2469,15 @@ if calcular:
         if margen_critico_C < 10:
 
             st.warning(
-                "⚠️ El refrigerante está operando a menos "
-                "de 10 °C de su temperatura crítica. "
-                "Esta condición debe revisarse cuidadosamente "
-                "para selección real de equipo."
+                "⚠️ The refrigerant is operating less than "
+                "10 °C below its critical temperature. "
+                "This condition should be carefully reviewed "
+                "before actual equipment selection."
             )
 
 
     except Exception as error:
 
         st.error(
-            f"❌ Error de cálculo: {error}"
+            f"❌ Calculation error: {error}"
         )
